@@ -1,0 +1,88 @@
+---
+import { site, nav, services } from "../data/site";
+---
+
+<footer class="relative bg-primary text-white border-t border-white/10">
+  <div class="hazard-thin absolute inset-x-0 top-0 h-1.5"></div>
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-12 md:grid-cols-3">
+      <div>
+        <img
+          src={site.footerLogo}
+          alt={site.name}
+          width="120"
+          height="30"
+          class="h-7 w-auto"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
+          {site.tagline}. Servicios de mantención y verificación eléctrica con
+          foco en la prevención de riesgos y fallas.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-mono text-xs uppercase tracking-[0.2em] text-white/40 font-semibold">
+          Servicios
+        </h3>
+        <ul class="mt-4 space-y-2.5">
+          {
+            services.map((service) => (
+              <li>
+                <a
+                  href="#servicios"
+                  class="text-sm text-white/70 transition-colors hover:text-accent"
+                >
+                  {service.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-mono text-xs uppercase tracking-[0.2em] text-white/40 font-semibold">
+          Contacto
+        </h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/70">
+          <li>
+            <a
+              href={site.phoneHref}
+              class="transition-colors hover:text-accent">{site.phone}</a
+            >
+          </li>
+          <li>
+            <a
+              href={`mailto:${site.email}`}
+              class="transition-colors hover:text-accent">{site.email}</a
+            >
+          </li>
+          <li>{site.location}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row"
+    >
+      <p class="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
+        © {new Date().getFullYear()}
+        {site.name}
+      </p>
+      <nav
+        class="flex gap-6 font-mono text-xs uppercase tracking-[0.15em] text-white/60"
+        aria-label="Pie de página"
+      >
+        {
+          nav.map((item) => (
+            <a href={item.href} class="transition-colors hover:text-accent">
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </div>
+</footer>
