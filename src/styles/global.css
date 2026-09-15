@@ -6,8 +6,8 @@
   --color-primary-deep: #07233f;
   --color-secondary: #f0f0f0;
   --color-secondary-dark: #e0e0e0;
-  --color-accent: #f8f009;
-  --color-accent-dark: #ded605;
+  --color-accent: #fccb07;
+  --color-accent-dark: #e0b404;
   --color-tertiary: #050505;
   --color-ink: #07233f;
   --color-ink-2: #051a30;
@@ -35,8 +35,8 @@
 
 @utility grid-lines {
   background-image:
-    linear-gradient(to right, rgba(248, 240, 9, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(248, 240, 9, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(252, 203, 7, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(252, 203, 7, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
